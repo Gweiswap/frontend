@@ -1,0 +1,356 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_xoxTokenAddress", "type": "address" },
+      { "internalType": "address[2]", "name": "_whitelistTokens", "type": "address[2]" },
+      { "internalType": "address", "name": "_treasuryContractAddress", "type": "address" },
+      { "internalType": "address", "name": "_priceFeedAddress", "type": "address" },
+      { "internalType": "bytes32", "name": "_merkleRoot", "type": "bytes32" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "previousOwner", "type": "address" },
+      { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [{ "indexed": false, "internalType": "address", "name": "account", "type": "address" }],
+    "name": "Paused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "internalType": "address", "name": "_sender", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "_valueUSD", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "_amountXOX", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "_amountXOXS", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "_round", "type": "uint256" }
+    ],
+    "name": "PreSaleTokenInvested",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [{ "indexed": false, "internalType": "address", "name": "account", "type": "address" }],
+    "name": "Unpaused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "internalType": "address", "name": "_sender", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "_amount", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "_round", "type": "uint256" }
+    ],
+    "name": "UserClaimedToken",
+    "type": "event"
+  },
+  { "stateMutability": "payable", "type": "fallback" },
+  {
+    "inputs": [],
+    "name": "BASE_DENOMINATOR",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "BONUS_PERCENTAGE",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "DISTRIBUTION_TOKEN",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "EXCHANGE_RATE",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MAXIMUM_BUY",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MINIMUM_BUY",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ONE_MONTH",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "time_", "type": "uint256" }],
+    "name": "changeTimeLock",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "currentRound",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" },
+      { "internalType": "uint256", "name": "_saleRound", "type": "uint256" }
+    ],
+    "name": "getInvestedAmount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_user", "type": "address" },
+      { "internalType": "uint256", "name": "_saleRound", "type": "uint256" }
+    ],
+    "name": "getInvestedUSDAmount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getLatestPrice",
+    "outputs": [{ "internalType": "int256", "name": "", "type": "int256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_tokenAddress", "type": "address" },
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+      { "internalType": "address", "name": "_referralAddress", "type": "address" }
+    ],
+    "name": "invest",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "launchTime",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "merkleRoot",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  { "inputs": [], "name": "pause", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  {
+    "inputs": [],
+    "name": "paused",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "account", "type": "address" },
+      { "internalType": "uint256", "name": "round", "type": "uint256" }
+    ],
+    "name": "pendingXOXInvest",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  { "inputs": [], "name": "renounceOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "saleRound",
+    "outputs": [
+      { "internalType": "uint256", "name": "totalDistribution", "type": "uint256" },
+      { "internalType": "uint256", "name": "startDate", "type": "uint256" },
+      { "internalType": "uint256", "name": "endDate", "type": "uint256" },
+      { "internalType": "uint256", "name": "exchangeRate", "type": "uint256" },
+      { "internalType": "uint256", "name": "bonusPercentage", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_startDate", "type": "uint256" },
+      { "internalType": "uint256", "name": "_endDate", "type": "uint256" }
+    ],
+    "name": "setUpNewSaleRound",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "_time", "type": "uint256" }],
+    "name": "setupLaunchTime",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "tokenWL",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "name": "totalRoundInvested",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  { "inputs": [], "name": "unpause", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  {
+    "inputs": [{ "internalType": "bytes32", "name": "_merkleRoot", "type": "bytes32" }],
+    "name": "updateMerkleRoot",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_startDate", "type": "uint256" },
+      { "internalType": "uint256", "name": "_endDate", "type": "uint256" },
+      { "internalType": "uint256", "name": "_round", "type": "uint256" }
+    ],
+    "name": "updateTimeline",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "_newContractAddress", "type": "address" }],
+    "name": "updateTreasuryContractAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_tokenAddress", "type": "address" },
+      { "internalType": "bool", "name": "_status", "type": "bool" }
+    ],
+    "name": "updateWhiteListToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "round", "type": "uint256" }],
+    "name": "userClaimInvestedToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "userClaimedAmount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "name": "userInvestedAmount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_tokenAddress", "type": "address" },
+      { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+      { "internalType": "address", "name": "_referralAddress", "type": "address" },
+      { "internalType": "bytes32[]", "name": "_merkleProof", "type": "bytes32[]" }
+    ],
+    "name": "whiteListedInvest",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "token", "type": "address" },
+      { "internalType": "uint256", "name": "amt", "type": "uint256" }
+    ],
+    "name": "withdraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "token", "type": "address" }],
+    "name": "withdrawAll",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint256", "name": "amt", "type": "uint256" }],
+    "name": "withdrawCurrency",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "xoxToken",
+    "outputs": [{ "internalType": "contract IERC20", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  { "stateMutability": "payable", "type": "receive" }
+]

@@ -1,0 +1,305 @@
+{
+  "name": "XOX Default List",
+  "timestamp": "2022-01-26T11:45:09Z",
+  "version": {
+    "major": 4,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://xoxnet.io/logo.png",
+  "keywords": ["pancake", "default"],
+  "tokens": [
+    {
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/4023.png"
+    },
+    {
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"
+    },
+    {
+      "name": "Tether",
+      "symbol": "USDT",
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png"
+    },
+    {
+      "name": "Binance-Peg Dogecoin",
+      "symbol": "DOGE",
+      "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43",
+      "chainId": 56,
+      "decimals": 8,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/74.png"
+    },
+    {
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "address": "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+    },
+    {
+      "name": "PancakeSwap Token",
+      "symbol": "CAKE",
+      "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/7186.png"
+    },
+    {
+      "name": "Binance-Peg Chainlink Token",
+      "symbol": "LINK",
+      "address": "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+    },
+    {
+      "name": "Binance-Peg Cardano Token",
+      "symbol": "ADA",
+      "address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png"
+    },
+
+    {
+      "name": "XOX",
+      "address": "0x6bb15Fd179539BFD6E78f18f5d91543142e0Ad9e",
+      "symbol": "XOX",
+      "decimals": 18,
+      "chainId": 97,
+      "logoURI": ""
+    },
+    {
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "address": "0xa3961366f8A7A5772C22A00788f1824d233B26ed",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/4023.png"
+    },
+    {
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "address": "0x65eCB72aDEb9b5da68aA7DdD4A334546E7Cd36e2",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png"
+    },
+    {
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "address": "0xc60a52351918c13eF3B27F72e5E71877ca3cB13A",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png"
+    },
+    {
+      "name": "Binance-Peg Dogecoin",
+      "symbol": "DOGE",
+      "address": "0xbB5a2336330C07c3b2B532210A1E5B93d747fb93",
+      "chainId": 97,
+      "decimals": 8,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/74.png"
+    },
+    {
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "address": "0x897f93Cc7E82cC78F076C32aA45c723f84959A0D",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+    },
+    {
+      "name": "PancakeSwap Token",
+      "symbol": "CAKE",
+      "address": "0x638666506b6875a8755884090c41Dee985aC1F6D",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/7186.png"
+    },
+    {
+      "name": "Binance-Peg Chainlink Token",
+      "symbol": "LINK",
+      "address": "0x07bbDcd736cFc0406a3CeD96B9F2289ACBCc4c76",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+    },
+    {
+      "name": "Binance-Peg Cardano Token",
+      "symbol": "ADA",
+      "address": "0x624bcfBb991cCef8e790E58eD973D8e24cc66eCc",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png"
+    },
+
+    {
+      "name": "Wrapped Bitcoin",
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png"
+    },
+    {
+      "name": "USD Coin",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png"
+    },
+    {
+      "name": "BNB",
+      "address": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
+      "symbol": "BNB",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png"
+    },
+    {
+      "name": "Polygon",
+      "address": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
+      "symbol": "MATIC",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+    },
+    {
+      "name": "Uniswap",
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "symbol": "UNI",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png"
+    },
+    {
+      "name": "SushiSwap",
+      "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+      "symbol": "SUSHI",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/6758.png"
+    },
+    {
+      "name": "Chainlink",
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "symbol": "LINK",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+    },
+    {
+      "name": "Shiba Inu",
+      "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+      "symbol": "SHIB",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png"
+    },
+
+    {
+      "name": "XOX",
+      "address": "0x6441D45eBDB505df041F7ab702Eb7fDBcca5ed7C",
+      "symbol": "XOX",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": ""
+    },
+    {
+      "name": "Wrapped Bitcoin",
+      "address": "0x2a924bcD60450C7a354413d8b2c906A3173F9208",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png"
+    },
+    {
+      "name": "BNB",
+      "address": "0x013cB3419Dd78A3A24dF6F9151514752228C6960",
+      "symbol": "BNB",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png"
+    },
+    {
+      "name": "USD Coin",
+      "address": "0xD898D309dAb33130EA57E8F106238ae4b76329f4",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png"
+    },
+    {
+      "name": "Polygon",
+      "address": "0xB4BdF7ADdeE19c35ecCa122C852103FAE0b3fe0B",
+      "symbol": "MATIC",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png"
+    },
+    {
+      "name": "Uniswap",
+      "address": "0x1bC4803310B723B4f0A2c27411315432b7db52Df",
+      "symbol": "UNI",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/7083.png"
+    },
+    {
+      "name": "SushiSwap",
+      "address": "0x28362Cd5D11a8ce0371B4768Cd8EDF8a943CC2A9",
+      "symbol": "SUSHI",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/6758.png"
+    },
+    {
+      "name": "Chainlink",
+      "address": "0xCfc1B83B17084e744423Db6314B7e811729c6514",
+      "symbol": "LINK",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png"
+    },
+    {
+      "name": "Shiba Inu",
+      "address": "0x5f933e0F9D17A4B28F229a2882e2E18dcef266c7",
+      "symbol": "SHIB",
+      "decimals": 18,
+      "chainId": 5,
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png"
+    },
+    {
+      "name": "XOX",
+      "address": "0x3B6dFC89760d5B6F64C043A74210ddF91264Beef",
+      "symbol": "XOX",
+      "decimals": 18,
+      "chainId": 2970385,
+      "logoURI": ""
+    },
+    {
+      "name": "USDC",
+      "address": "0xce221120F145B456ba41b370F11D5E536eCD2BcB",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 2970385,
+      "logoURI": ""
+    }
+  ]
+}
